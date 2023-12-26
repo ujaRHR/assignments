@@ -19,6 +19,7 @@ Route::get('/trips', [TripsController::class, 'tripsPage'])->name('trips');
 
 // UserZone
 Route::get('/home', [HomeController::class, 'homepage'])->name('home');
+Route::get('/bus-view', [HomeController::class, 'busView']);
 
 
 
@@ -36,4 +37,8 @@ Route::post('/delete-route/{id}', [RouteController::class, 'deleteRoute']);
 
 Route::post('/trips', [TripsController::class, 'createTrip']);
 Route::post('/delete-trip/{id}', [TripsController::class, 'deleteTrip']);
+
+
+// UserEnd
+Route::post('/home', [HomeController::class, 'searchTicket']);
 
